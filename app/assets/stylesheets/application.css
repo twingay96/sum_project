@@ -1,2 +1,13 @@
 .mainbody { background-color: Antiquewhite; }
 .custom-a { text-decoration: none;}
+.navbar-brand { position: relative; left: 10px;}
+#user_dropdown {  right: 0; }
+
+#footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* bg-light 클래스의 배경색 */
+    text-align: center;
+  }

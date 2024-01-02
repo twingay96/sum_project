@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html>
+<style>
+  .html {margin: 0;}
+</style>
+<html class="html">
   <head>
     <title>SomeProject</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,10 +18,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class= "container mainbody">
-    <%= link_to "Home", root_path ,class: "custom-a" %>
-    <%= link_to "terms", terms_path ,class: "custom-a" %>
-    <%= link_to "privacy", privacy_path ,class: "custom-a" %>
-    <%= yield %>
+  <body class="mainbody">
+    <%= render 'layouts/header'%>
+    <%= render 'layouts/messages'%>
+    <div class= "container">
+      <%= yield %>
+    </div>
   </body>
+  <%= render 'layouts/footer'%>
 </html>
