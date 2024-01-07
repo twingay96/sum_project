@@ -19,4 +19,11 @@ class User < ApplicationRecord
     end
     user
   end
+  def username
+    if name?
+      name
+    else
+      email.split('@').first
+    end
+  end
 end

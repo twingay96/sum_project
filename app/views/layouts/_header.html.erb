@@ -25,8 +25,12 @@
       <% if current_user %>
         <li class="nav-item dropdown" id = "user_dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="fa fa-user"></div>
-            <b><%= current_user.email %></b>
+            <% if current_user.image? %>
+              <%= image_tag current_user.image, size: "30x30", class: "rounded-circle"%>
+            <% else %>
+              <div class="fa fa-user"></div>
+            <% end%>
+            <b><%= current_user.username %></b>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to edit_user_registration_path, class: "dropdown-item #{'active font-weight-bold' if current_page?(edit_user_registration_path)}" do %>
