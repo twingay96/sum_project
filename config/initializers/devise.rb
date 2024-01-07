@@ -273,7 +273,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   if Rails.env.production?
-    config.omniauth :google_oauth2, ENV['client_id '], ENV['client_secret'],{
+    config.omniauth :google_oauth2, ENV['client_id'], ENV['client_secret'],{
       redirect_uri: 'https://somproject-efae16244f6a.herokuapp.com/users/auth/google_oauth2/callback'
     }
   else
