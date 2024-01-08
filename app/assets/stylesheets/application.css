@@ -1,4 +1,7 @@
-.mainbody { background-color: Antiquewhite; }
+.mainbody { 
+  background-color: Antiquewhite; 
+  word-break: break-all;
+}
 .custom-a { text-decoration: none;}
 .navbar-brand { position: relative; left: 10px;}
 #user_dropdown {  right: 0; }
