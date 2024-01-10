@@ -21,7 +21,10 @@
 
   <body class="mainbody">
     <%= render 'layouts/header'%>
-    <%= render 'layouts/messages'%>
+    <div class= "container">
+      <%= Time.zone.now %>
+      <%= render 'layouts/messages'%>
+    </div>
     <div class= "container">
       <%= yield %>
     </div>

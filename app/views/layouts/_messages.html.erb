@@ -1,2 +1,16 @@
-<p class="notice"><%= notice %></p>
+<%# < class="notice"><%= notice %>
 <p class="alert"><%= alert %></p>
+
+<% flash.each do |key,value| %>
+    <div class="card" data-controller= "delete-message" >
+        <div class= "card-body bg-<%= key.to_s == 'notice'? 'success-subtle' : 'danger-subtle'%>" id="message">
+            <%= form_with url: dismiss_flash_path, method: :delete do  |form| %>
+                <%= form.submit "",class:"btn-close btn-close-blue" ,data: {action: "click -> delete-message#dismiss" },"aria-label" => "Close" %>
+                <button type="button" class="btn-close btn-close-blue" data-action="click->delete-message#dismiss" aria-label="Close"></button>
+                <%= value %>
+            <% end %>
+        </div>
+    </div>
+    <br>
+    
+<% end %>
