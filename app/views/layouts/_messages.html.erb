@@ -3,7 +3,7 @@
 
 <% flash.each do |key,value| %>
     <div class="card" data-controller= "delete-message" >
-        <div class= "card-body bg-<%= ['notice', 'visit_first'].include?(key.to_s) ? 'success-subtle' : 'danger-subtle'%>" id="message">
+        <div class= "card-body bg-<%= ['notice', 'visit_first','in_userpage'].include?(key.to_s) ? 'success-subtle' : 'danger-subtle'%>" id="message">
             <button type="button" class="btn-close btn-close-blue" data-action="click->delete-message#dismiss" aria-label="Close"></button>
             <%= value %>
         </div>

@@ -7,7 +7,10 @@ class UsersController < ApplicationController
     # 특정 user 페이지 액션
     def show
         @user = User.find(params[:id])
-        flash[:notice] = "You are in user page "
+        unless session[:visit_userpage]
+            flash.now[:in_userpage]="유저페이지 입니다."
+            session[:visit__userpage]= true    
+        end
     end
 
     def dismiss_flash

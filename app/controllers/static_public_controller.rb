@@ -5,7 +5,6 @@ class StaticPublicController < ApplicationController
     unless session[:visit_landing_page]
       flash.now[:visit_first]="this is landingpage!"
       session[:visit_landing_page]= true
-      
     end
   end
 
