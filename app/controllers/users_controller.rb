@@ -9,12 +9,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         unless session[:visit_userpage]
             flash.now[:in_userpage]="유저페이지 입니다."
-            session[:visit__userpage]= true    
+            session[:visit_userpage]= true    
         end
-    end
-
-    def dismiss_flash
-        flash[:notice] = nil
-        head :ok # 이 부분은 단지 HTTP 상태 코드 200을 반환합니다.
     end
 end
