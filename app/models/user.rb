@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :trackable,
-         :recoverable, :rememberable, :validatable, 
+         :recoverable, :rememberable, :validatable, :confirmable,
          :omniauthable, omniauth_providers: [:google_oauth2] 
 
 
@@ -18,6 +18,7 @@ class User < ApplicationRecord
         password: Devise.friendly_token[0,20]
       )
     end
+    user.skip_confirmation!
     user
   end
   def username
