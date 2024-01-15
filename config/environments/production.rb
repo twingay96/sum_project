@@ -65,6 +65,7 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   #config.action_mailer.default_url_options = { host: 'https://somproject-efae16244f6a.herokuapp.com/' }
   config.action_mailer.default_url_options = { host: 'flavonoid37.org', protocol: 'https' }
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
   # config.action_mailer.delivery_method = :smtp
 
