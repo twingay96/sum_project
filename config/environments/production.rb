@@ -73,8 +73,8 @@ Rails.application.configure do
     address:         'email-smtp.ap-northeast-2.amazonaws.com',
     port:            587,
     #domain:          'http://flavonoid37.org/',
-    user_name:       Rails.application.credentials.dig(:aws,:ses,:id),
-    password:        Rails.application.credentials.dig(:aws,:ses, :secret),
+    user_name:       ENV['AWS_SES_ID'], # Heroku Config Var에서 가져옴
+    password:        ENV['AWS_SES_SECRET'],  # Heroku Config Var에서 가져옴
     authentication:  'plain',
     enable_starttls: true,
     open_timeout:    5,
