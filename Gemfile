@@ -46,7 +46,9 @@ gem 'omniauth-google-oauth2'
 gem 'dotenv-rails'
 gem "omniauth-rails_csrf_protection"
 gem "letter_opener", group: :development
-
+# gem 'faker'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main', group: :development
+gem 'pagy'
 # Use Sass to process CSS
 # gem "sassc-rails"
 

@@ -2,9 +2,8 @@
 <br>
 <%= link_to_unless_current user.email, user %>
 <br>
+<p> username: </p>
 <%= user.name %>
-<hr>
-
 <br>
 <%= 'sign_in_count'.humanize %>
 <%= user.sign_in_count  %>
@@ -20,5 +19,6 @@
 <br>
 <%= 'last_sign_in_ip'.humanize %>
 <%= user.last_sign_in_ip %>
+<hr>
 
 

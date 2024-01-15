@@ -2,7 +2,8 @@ class UsersController < ApplicationController
     before_action :authenticate_user!
     # 모든 users 보는 액션
     def index
-        @users = User.all
+        #@users = User.all
+        @pagy, @users = pagy(User.all.order(created_at: :desc))
     end
     # 특정 user 페이지 액션
     def show
