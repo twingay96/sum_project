@@ -67,18 +67,18 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'flavonoid37.org', protocol: 'https' }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
-  # config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
 
-  # config.action_mailer.smtp_settings = {
-  #   address:         'email-smtp.ap-northeast-2.amazonaws.com',
-  #   port:            587,
-  #   #domain:          'http://flavonoid37.org/',
-  #   user_name:       Rails.application.credentials.dig(:aws,:ses,:id),
-  #   password:        Rails.application.credentials.dig(:aws,:ses, :secret),
-  #   authentication:  'plain',
-  #   enable_starttls: true,
-  #   open_timeout:    5,
-  #   read_timeout:    5 }
+  config.action_mailer.smtp_settings = {
+    address:         'email-smtp.ap-northeast-2.amazonaws.com',
+    port:            587,
+    #domain:          'http://flavonoid37.org/',
+    user_name:       Rails.application.credentials.dig(:aws,:ses,:id),
+    password:        Rails.application.credentials.dig(:aws,:ses, :secret),
+    authentication:  'plain',
+    enable_starttls: true,
+    open_timeout:    5,
+    read_timeout:    5 }
   
 
   # Ignore bad email addresses and do not raise email delivery errors.
