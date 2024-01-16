@@ -1,9 +1,10 @@
 <%= user.id %>
 <br>
-<%= link_to_unless_current user.email, user %>
+<%= link_to_unless_current user.email, user_path(user) %> 
 <br>
 <p> username: </p>
 <%= user.name %>
+
 <br>
 <%= 'sign_in_count'.humanize %>
 <%= user.sign_in_count  %>

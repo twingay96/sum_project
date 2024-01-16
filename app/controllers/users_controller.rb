@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     def index
         #@users = User.all
         @pagy, @users = pagy(User.all.order(created_at: :desc))
+        #binding.b
     end
     # 특정 user 페이지 액션
     def show
