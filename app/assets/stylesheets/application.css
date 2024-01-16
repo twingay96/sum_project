@@ -1,17 +1,18 @@
 .mainbody { 
   background-color: Antiquewhite; 
   word-break: break-all;
+  padding-bottom: 120px;
 }
 .custom-a { text-decoration: none;}
 .navbar-brand { position: relative; left: 10px;}
 #user_dropdown {  right: 0; }
 
 #footer {
-    /* position: fixed; */
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #f8f9fa; /* bg-light 클래스의 배경색 */
     text-align: center;
-    
+    /* z-index: -1; */
   }
