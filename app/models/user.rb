@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable,
          :omniauthable, omniauth_providers: [:google_oauth2] 
 
+  def self.ransackable_attributes(auth_object = nil )
+    super - %W( encrypted_password )
+  end
 
   def self.from_omniauth(access_token)
     user = User.where(email: access_token.info.email).first

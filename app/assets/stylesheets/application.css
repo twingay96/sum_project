@@ -4,6 +4,7 @@
   padding-bottom: 120px;
 }
 .custom-a { text-decoration: none;}
+.no-underline { text-decoration: none;}
 .navbar-brand { position: relative; left: 10px;}
 #user_dropdown {  right: 0; }
 

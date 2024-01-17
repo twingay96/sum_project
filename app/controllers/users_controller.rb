@@ -3,8 +3,10 @@ class UsersController < ApplicationController
     # 모든 users 보는 액션
     def index
         #@users = User.all
-        @pagy, @users = pagy(User.all.order(created_at: :desc))
-        #binding.b
+        @q = User.order(created_at: :desc).ransack(params[:q])
+        @pagy, @users = pagy(@q.result(distinct: true))
+        #@pagy, @users = pagy(User.all.order(created_at: :desc), steps: { 0=>3, 1=>[3,5,5,3], 720=> [5,7,7,5] })
+
     end
     # 특정 user 페이지 액션
     def show
