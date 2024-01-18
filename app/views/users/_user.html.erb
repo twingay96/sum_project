@@ -21,11 +21,14 @@
 <%= 'last_sign_in_ip'.humanize %>
 <%= user.last_sign_in_ip %>
 <br>
+<%='confirmed'.humanize %>
+<%= boolean_label(user.confirmed?)%>
+<br>
 <%= 'confirmed_at'.humanize %>
 <% if user.confirmed_at.present? %>
     <%= user.confirmed_at.strftime('%d/%b/%Y') %>
 <% end %>
-
+<br>
 <hr>
 
 
