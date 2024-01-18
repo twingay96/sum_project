@@ -26,7 +26,7 @@ module ApplicationHelper
     def boolean_label(value)
         case value
         when true
-            badge_color = "badge bg-sucess"
+            badge_color = "badge bg-success"
         when false
             badge_color = "badge bg-danger"
         end
