@@ -1,9 +1,11 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable, :trackable,
+  devise :invitable, :database_authenticatable, :registerable, :trackable,
          :recoverable, :rememberable, :validatable, :confirmable,
-         :omniauthable, omniauth_providers: [:google_oauth2] 
+         :omniauthable, omniauth_providers: [:google_oauth2]
+
+  has_many :invitees, class_name: 'User', foreign_key: :invited_by_id
 
   def self.ransackable_attributes(auth_object = nil )
     super - %W( encrypted_password )

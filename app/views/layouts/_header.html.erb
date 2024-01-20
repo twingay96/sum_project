@@ -17,7 +17,11 @@
       <% if current_user %>
         <%= deep_active_link_to users_path do %>
           <div class="fa-solid fa-users"></div>
-          Users
+          사용자목록
+        <% end %>
+        <%= deep_active_link_to new_user_invitation_path do %>
+          <i class= "fa fa-user-plus"></i>
+          친구초대
         <% end %>
         <%= link_to privacy_path, class: "nav-link #{'active font-weight-bold' if current_page?(privacy_path)}" do %>
           <div class="fa-solid fa-hand"></div>

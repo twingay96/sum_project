@@ -33,4 +33,23 @@ module ApplicationHelper
         content_tag(:span, value, class: badge_color)
     end
 
+    # def puts_invitees(value)
+    #     content_tag(:div) do 
+    #         if value.invitees.count > 0
+    #             # value.invitees.each do |invitee|   
+    #             #         # invitee.email
+    #             # end
+    #         end
+    #     end
+    # end
+    def puts_invitees(user)
+        return '' if user.invitees.empty?
+        content_tag(:div) do
+          user.invitees.map do |invitee|
+            content_tag(:span, invitee.email)
+          end.join.html_safe
+        end
+        #binding.b
+    end
+
 end
