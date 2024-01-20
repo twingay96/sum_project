@@ -12,6 +12,10 @@
     <strong>Created</strong>
 <% end %>
 
+<%= sort_link(@q, :posts_count , class: 'no-underline',default_order: :desc ) do %>
+    <strong>생성한 게시글 갯수</strong>
+<% end %>
+
 
 <%= search_form_for @q do |f| %>
     <%= f.label :email_cont %>

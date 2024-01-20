@@ -6,7 +6,7 @@
 
   <p>
     <strong>Body:</strong>
-    <%= simple_format(post.body) %>
+    <%= markdown(post.body) %>
   </p>
   <strong>작성일: </strong><%= post.created_at.strftime('%d %B %Y') %>
   <p>

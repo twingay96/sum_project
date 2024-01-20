@@ -51,6 +51,8 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main
 gem 'pagy'
 gem 'ransack'
 gem 'devise_invitable'
+gem 'rouge'
+gem 'redcarpet'
 # Use Sass to process CSS
 # gem "sassc-rails"
 

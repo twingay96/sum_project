@@ -231,6 +231,7 @@ GEM
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
+    redcarpet (3.6.0)
     regexp_parser (2.8.3)
     reline (0.4.1)
       io-console (~> 0.5)
@@ -238,6 +239,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.6)
+    rouge (4.2.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     selenium-webdriver (4.16.0)
@@ -303,6 +305,8 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.8)
   ransack
+  redcarpet
+  rouge
   selenium-webdriver
   sprockets-rails
   stimulus-rails

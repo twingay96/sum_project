@@ -33,15 +33,6 @@ module ApplicationHelper
         content_tag(:span, value, class: badge_color)
     end
 
-    # def puts_invitees(value)
-    #     content_tag(:div) do 
-    #         if value.invitees.count > 0
-    #             # value.invitees.each do |invitee|   
-    #             #         # invitee.email
-    #             # end
-    #         end
-    #     end
-    # end
     def puts_invitees(user)
         return '' if user.invitees.empty?
         content_tag(:div) do
@@ -49,7 +40,21 @@ module ApplicationHelper
             content_tag(:span, invitee.email)
           end.join.html_safe
         end
-        #binding.b
     end
+    require 'redcarpet'
+  require 'rouge'
+  require 'rouge/plugins/redcarpet'
 
+  class HTML < Redcarpet::Render::HTML
+    include Rouge::Plugins::Redcarpet
+  end
+# 마크다운
+  def markdown(text)
+    options = %i[
+        hard_wrap autolink no_intra_emphasis tables fenced_code_blocks
+        disable_indented_code_blocks strikethrough lax_spacing space_after_headers
+        quote footnotes highlight underline
+    ]
+    Markdown.new(text,*options).to_html.html_safe
+  end
 end

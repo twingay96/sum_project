@@ -18,7 +18,12 @@
 
   <div>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body,
+        style: "width: 100%",
+        rows: 8,
+        maxlength: 5000,
+        placeholder: "user Markdwon for format"
+    %>
   </div>
 
   <div>
