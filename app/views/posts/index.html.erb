@@ -4,10 +4,12 @@
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
+    <%= render 'posts/post' , post: post %>
     <p>
       <%= link_to "Show this post", post %>
     </p>
+    <b><%= button_to "수정", edit_post_path(post) ,  class: "btn btn-primary"%></b>
+    <b><%= button_to "삭제", post, method: :delete,  class: "btn btn-primary", data: { confirm: '삭제시 복구가 안됩니다. 정말 삭제하시겠습니까?' }%></b>
   <% end %>
 </div>
 

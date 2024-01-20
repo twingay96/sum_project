@@ -6,6 +6,10 @@
 .custom-a { text-decoration: none;}
 .no-underline { text-decoration: none;}
 .navbar-brand { position: relative; left: 10px;}
+#posts b {
+  display: inline-block; /* 또는 display: inline; */
+  margin-right: 10px; /* 버튼 사이에 약간의 공간을 추가합니다. */
+}
 #user_dropdown {  right: 0; }
 
 #footer {

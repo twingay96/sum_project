@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:google_oauth2]
 
   has_many :invitees, class_name: 'User', foreign_key: :invited_by_id
+  has_many :posts, dependent: :restrict_with_error
 
   def self.ransackable_attributes(auth_object = nil )
     super - %W( encrypted_password )

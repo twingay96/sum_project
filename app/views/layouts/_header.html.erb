@@ -13,8 +13,15 @@
         <div class="fa fa-home"></div>
         Home
       <% end %>
-
       <% if current_user %>
+      <%= deep_active_link_to new_post_path do %>
+        <div class="fa fa-plus"></div>
+        글쓰기
+      <% end %>
+        <%= deep_active_link_to posts_path do %>
+          <i class="fa-solid fa-passport"></i>
+          게시물목록
+        <% end %>
         <%= deep_active_link_to users_path do %>
           <div class="fa-solid fa-users"></div>
           사용자목록

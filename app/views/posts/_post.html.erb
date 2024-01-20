@@ -1,17 +1,17 @@
 <div id="<%= dom_id post %>">
   <p>
     <strong>Title:</strong>
-    <%= post.title %>
+    <%= link_to_unless_current post.title, post %>
   </p>
 
   <p>
     <strong>Body:</strong>
-    <%= post.body %>
+    <%= simple_format(post.body) %>
   </p>
-
+  <strong>작성일: </strong><%= post.created_at.strftime('%d %B %Y') %>
   <p>
-    <strong>User:</strong>
-    <%= post.user_id %>
+    <strong>User: </strong>
+    <%= link_to post.user.username, post.user %>
   </p>
 
 </div>
