@@ -21,3 +21,7 @@
     text-align: center;
     /* z-index: -1; */
   }
+
+.rich_text_area{
+  background-color: white;
+}

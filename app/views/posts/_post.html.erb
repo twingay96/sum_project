@@ -6,7 +6,9 @@
 
   <p>
     <strong>Body:</strong>
-    <%= markdown(post.body) %>
+    <div class="trix-content">
+      <%= post.body %>
+    </div>
   </p>
   <strong>작성일: </strong><%= post.created_at.strftime('%d %B %Y') %>
   <p>
