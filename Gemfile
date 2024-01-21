@@ -53,6 +53,8 @@ gem 'ransack'
 gem 'devise_invitable'
 gem 'rouge'
 gem 'redcarpet'
+gem "image_processing", ">= 1.2"
+gem "aws-sdk-s3"
 # Use Sass to process CSS
 # gem "sassc-rails"
 
