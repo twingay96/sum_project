@@ -323,7 +323,7 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   if Rails.env.production?
     config.omniauth :google_oauth2, ENV['client_id'], ENV['client_secret'],{
-      redirect_uri: 'https://somproject-efae16244f6a.herokuapp.com/users/auth/google_oauth2/callback'
+      redirect_uri: 'https://flavonoid37.org/users/auth/google_oauth2/callback'
     }
   else
     config.omniauth :google_oauth2, Rails.application.credentials.dig(:google,:id), Rails.application.credentials.dig(:google,:password),{
