@@ -26,6 +26,8 @@ class PostsController < ApplicationController
     #binding.b 
     if @post.save!
       redirect_to post_url(@post), notice: "Post was successfully created."
+      puts "post_params:", post_params
+      puts "@post:", @post ,@post.title
     else
       render :new, status: :unprocessable_entity
     end
@@ -59,6 +61,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title,:body)
     end
 end

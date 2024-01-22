@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= favicon_link_tag "thubnail.png" , size: "30x30" , class: "rounded-circle" %>
-    <%= stylesheet_link_tag 'actiontext', media: 'all' %>
+    <%= stylesheet_link_tag 'actiontext', "data-turbo-track": "reload"%>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%# Bootstrap CDN추가 %>
