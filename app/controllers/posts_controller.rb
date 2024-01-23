@@ -29,7 +29,7 @@ class PostsController < ApplicationController
       puts "post_params:", post_params
       puts "@post:", @post ,@post.title
     else
-      binding.b
+      #binding.b
       puts "@post의 에러:" , @post.errors
       render :new, status: :unprocessable_entity
     end
