@@ -27,7 +27,7 @@
   height: 40vh;
 }
 
-.rich_text_area img {
+.trix-editor img {
   max-width: 80%;
   max-height: 80%;
   height: auto;
