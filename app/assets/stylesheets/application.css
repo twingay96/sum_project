@@ -26,3 +26,10 @@
   background-color: white;
   height: 40vh;
 }
+
+.rich_text_area img {
+  max-width: 80%;
+  max-height: 80%;
+  height: auto;
+  width: auto;
+}
