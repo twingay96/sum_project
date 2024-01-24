@@ -24,15 +24,25 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = current_user
     #binding.b 
-    if @post.save
-      redirect_to post_url(@post), notice: "Post was successfully created."
-      puts "post_params:", post_params
-      puts "@post:", @post ,@post.title
-    else
-      #binding.b
-      puts "@post의 에러:" , @post.errors
-      render :new, status: :unprocessable_entity
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
+        puts "@post:", @post ,@post.title
+      else
+        #binding.b
+        puts "@post의 에러:" , @post.errors
+        format.html { render :edit, status: :unprocessable_entity }
+      end
     end
+    # if @post.save
+    #   redirect_to post_url(@post), notice: "Post was successfully created."
+    #   puts "post_params:", post_params
+    #   puts "@post:", @post ,@post.title
+    # else
+    #   #binding.b
+    #   puts "@post의 에러:" , @post.errors
+    #   render :new, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /posts/1 or /posts/1.json
