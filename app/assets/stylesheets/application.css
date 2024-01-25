@@ -25,7 +25,10 @@
 .rich_text_area{
   background-color: white;
   height: 40vh;
+  max-width: 90%;
+  overflow: auto;
 }
+
 
 .trix-editor img {
   max-width: 80%;
@@ -33,3 +36,4 @@
   height: auto;
   width: auto;
 }
+
