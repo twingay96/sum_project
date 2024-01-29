@@ -9,7 +9,8 @@
       <%= link_to "Show this post", post %>
     </p>
     <b><%= link_to "수정", edit_post_path(post) ,class: "btn btn-primary"  %></b> |
-    <b><%= button_to "삭제", post, method: :delete,  class: "btn btn-primary", data: { confirm: '삭제시 복구가 안됩니다. 정말 삭제하시겠습니까?' }%></b>
+    <b><%= button_to "삭제", post, method: :delete,  class: "btn btn-primary", 
+          data: { controller: "confirm", action: "click->confirm#confirm", confirm_target: "button"}%></b>
     <hr>
   <% end %>
 </div>
