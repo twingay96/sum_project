@@ -37,3 +37,8 @@
   width: auto;
 }
 
+.responsive-image{
+  width: 20%; /* 컨테이너 너비의 50%로 설정 */
+  height: auto; /* 비율 유지를 위해 높이를 auto로 설정 */
+}
+

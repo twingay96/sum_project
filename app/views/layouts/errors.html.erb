@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<style>
+  .html {margin: 0;}
+</style>
+<html class="html">
+  <head>
+    <title>SomeProject</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag "thubnail.png" , size: "30x30" , class: "rounded-circle" %>
+    <%= stylesheet_link_tag 'actiontext', "data-turbo-track": "reload"%>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%# Bootstrap CDN추가 %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <%# fontawsone CDN 추가 %>
+    <script src="https://kit.fontawesome.com/3b5fa43c7d.js" crossorigin="anonymous"></script> 
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="mainbody">
+    <main class= "d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <%= yield %>
+    </main>
+  </body>
+</html>

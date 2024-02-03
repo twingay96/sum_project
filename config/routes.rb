@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  match '/500', via: :all, to: 'errors#internal_server_error'
+  match '/404', via: :all, to: 'errors#not_found'
+  
   resources :posts
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', confirmations: 'confirmations' }
   root 'static_public#landing_page'
