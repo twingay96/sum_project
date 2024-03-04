@@ -34,6 +34,10 @@
           <div class="fa-solid fa-hand"></div>
           Privacy
         <% end %>
+        <%= link_to tetris_path, class:"nav-link #{'active font-weight-bold' if current_page?(privacy_path)}" do %>
+          <div class="fa-solid fa-vector-square"></div>
+          tetris
+        <% end %>
       <% end %>
     </div>
     <div class="navbar-nav ms-auto">

@@ -13,4 +13,8 @@ class StaticPublicController < ApplicationController
 
   def terms
   end
+
+  def tetris
+    # tetris 액션
+  end
 end
