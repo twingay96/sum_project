@@ -8,6 +8,16 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    '''
+    밑에건 추후에 post 테이블에 is_deleted 컬럼추가 후 사용할 로직
+    '''
+    '''
+    if @post.nil? && @post.is_deleted
+      respond_to do |format|
+        format.html { render :is_deleted, status: :unprocessable_entity }
+      end
+    end
+    '''
   end
 
   # GET /posts/new
@@ -70,6 +80,15 @@ class PostsController < ApplicationController
     def set_post
       @post = Post.find(params[:id])
     end
+    '''
+    밑에건 추후에 post 테이블에 is_deleted 컬럼추가 후 사용할 로직
+    '''
+    # find_by_id()는 레코드를 찾지 못한 경우 nil을 반환하게 되어 @post가 nil이 됩니다. ActiveRecord::RecordNotFound 예외가 발생 안함
+    '''
+    def set_post
+      @post = Post.where(is_deleted: false).find_by_id(params[:id])
+    end
+    '''
 
     # Only allow a list of trusted parameters through.
     def post_params
