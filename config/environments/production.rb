@@ -1,5 +1,6 @@
 require "active_support/core_ext/integer/time"
-
+Rails.application.routes.default_url_options[:host] = 'https://flavonoid37.org' 
+# 위의 구절은 Active Storage의 이미지 파일에 접근할 수 있는 전체 URL을 생성하기 위한 호스트 설정
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 

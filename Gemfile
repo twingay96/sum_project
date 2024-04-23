@@ -56,6 +56,7 @@ gem 'rouge'
 gem 'redcarpet'
 gem "image_processing", ">= 1.2"
 gem "aws-sdk-s3"
+gem 'httparty'
 #gem 'ffi'
 #gem 'ruby-vips'
 # Use Sass to process CSS
